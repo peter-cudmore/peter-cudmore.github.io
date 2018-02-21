@@ -18,7 +18,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Peter Cudmore"  # (translatable)
-BLOG_TITLE = "Pete's Pages."  # (translatable)
+BLOG_TITLE = "Peter Cudmore's Webpage"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "http://peter-cudmore.github.io/"
@@ -26,7 +26,7 @@ SITE_URL = "http://peter-cudmore.github.io/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://peter-cudmore.github.io/"
 BLOG_EMAIL = "peter.cudmore@unimelb.edu.au"
-BLOG_DESCRIPTION = "A collection of my interests."  # (translatable)
+BLOG_DESCRIPTION = ""  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -134,6 +134,10 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/", "About"),
+        ("/pages/research/", "Research"),
+        ("/pages/teaching/", "Engagement"),
+        ("/pages/misc/", "Misc"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
@@ -141,6 +145,7 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
+#THEME = "maupassant"
 THEME = "jidn"
 
 # Primary color of your theme. This will be used to customize your theme and
@@ -617,7 +622,7 @@ USE_BASE_TAG = False
 # relative URL.
 #
 # If you don't need any of these, just set to []
-REDIRECTIONS = []
+REDIRECTIONS = [("index.html", "/pages/index.html")]
 
 # Presets of commands to execute to deploy. Can be anything, for
 # example, you may use rsync:
@@ -1361,7 +1366,18 @@ UNSLUGIFY_TITLES = True
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
     "JIDN-theme": "theme-base-red",
-
+    "JIDN": {
+        BLOG_AUTHOR: {
+            "image": "/images/profile_small.jpg",
+            "email": BLOG_EMAIL,  # or something else for alternate authors
+            "bio": """I am the very model of a modern, major general.""",
+            "map": "Melbourne, VIC, AU ",
+            "social": (
+                "https://twitter.com/peter_cudmore",
+                "https://github.com/peter-cudmore"
+                )
+            }
+    }
 }
 
 # Add functions here and they will be called with template
