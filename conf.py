@@ -134,9 +134,8 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/", "About"),
         ("/pages/research/", "Research"),
-        ("/pages/teaching/", "Engagement"),
+#        ("/pages/teaching/", "Engagement"),
         ("/pages/misc/", "Misc"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
@@ -1370,11 +1369,12 @@ GLOBAL_CONTEXT = {
         BLOG_AUTHOR: {
             "image": "/images/profile_small.jpg",
             "email": BLOG_EMAIL,  # or something else for alternate authors
-            "bio": """I am the very model of a modern, major general.""",
-            "map": "Melbourne, VIC, AU ",
+            "bio": """yes.""",
+            "map": "Melbourne, VIC, AU",
             "social": (
                 "https://twitter.com/peter_cudmore",
-                "https://github.com/peter-cudmore"
+                "https://github.com/peter-cudmore",
+                "https://www.linkedin.com/in/peter-cudmore-244422b5/"
                 )
             }
     }
