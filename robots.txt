@@ -1,0 +1,4 @@
+Sitemap: http://peter-cudmore.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: peter-cudmore.github.io
